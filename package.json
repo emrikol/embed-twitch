@@ -1,0 +1,15 @@
+{
+  "name": "guten-twitch-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
+  },
+  "dependencies": {
+    "cgb-scripts": "1.22.0",
+    "@wordpress/url": "2.6.0",
+    "@wordpress/compose": "3.5.0"
+  }
+}
