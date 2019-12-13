@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Embeds for Twitch and Gutenberg.
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
+ * Plugin URI: https://github.com/emrikol/embed-twitch/
  * Description: Allows Twitch channels, videos, and clips to be auto-embedded.
  * Author: Derrick Tennant
  * Author URI: https://emrikol.com/
