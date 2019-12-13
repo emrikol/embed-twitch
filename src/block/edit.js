@@ -6,6 +6,7 @@ import { __, _x } from '@wordpress/i18n';
 import { Component } from '@wordpress/element';
 import { Placeholder, SandBox, Button, IconButton, Toolbar } from '@wordpress/components';
 import { BlockControls, BlockIcon } from '@wordpress/block-editor';
+import md5 from 'md5';
 
 /**
  * Internal dependencies
@@ -59,6 +60,7 @@ class TwitchEdit extends Component {
 		const { url } = attributes;
 		const { editedUrl, interactive, editingUrl, resolvingRedirect } = this.state;
 		const type = embedType( url );
+		const vidHash = md5( url );
 		const cannotEmbed = url && ! type;
 		const controls = (
 			<BlockControls>
@@ -112,7 +114,7 @@ class TwitchEdit extends Component {
 		return (
 			<div className={ className }>
 				{ controls }
-				<EmbedSrc width='200' height='200' type={type.type} id={type.ID} onFocus={ this.hideOverlay } />
+				<EmbedSrc width='580' height='326' type={type.type} id={type.ID} vidHash={ vidHash } onFocus={ this.hideOverlay } />
 				{ ! interactive && (
 					<div
 						className="block-library-embed__interactive-overlay"

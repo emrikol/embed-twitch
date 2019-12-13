@@ -1,13 +1,12 @@
 // External dependencies
 import { Component } from '@wordpress/element';
-import { withInstanceId } from '@wordpress/compose';
 
 class EmbedSrc extends Component {
 
 	componentDidMount() {
-		const { width, height, type, id, instanceId } = this.props;
+		const { width, height, type, id, vidHash } = this.props;
 		const embedClass =  'embed-twitch';
-		const embedId    = `${ embedClass }-${ instanceId }`;
+		const embedId    = `${ embedClass }-${ vidHash }`;
 
 		// Let's just run this JS in the editor once the component mounts.
 		if ( 'video' === type || 'channel' === type ) {
@@ -25,9 +24,9 @@ class EmbedSrc extends Component {
 	}
 
 	render() {
-		const { width, height, type, id, instanceId } = this.props;
+		const { width, height, type, id, vidHash } = this.props;
 		const embedClass =  'embed-twitch';
-		const embedId    = `${ embedClass }-${ instanceId }`;
+		const embedId    = `${ embedClass }-${ vidHash }`;
 
 		if ( ! this.props.width ) {
 			return <div>Loading…</div>;
@@ -67,5 +66,4 @@ class EmbedSrc extends Component {
 
 }
 
-//export default EmbedSrc;
-export default withInstanceId( EmbedSrc );
+export default EmbedSrc;

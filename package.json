@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "cgb-scripts": "1.22.0",
+    "md5": "2.2.1",
     "@wordpress/url": "2.6.0",
     "@wordpress/compose": "3.5.0"
   }
