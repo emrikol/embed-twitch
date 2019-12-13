@@ -1,6 +1,6 @@
 {
-  "name": "guten-twitch-cgb-guten-block",
-  "version": "1.0.0",
+  "name": "emrikol-embed-twitch",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "cgb-scripts start",
